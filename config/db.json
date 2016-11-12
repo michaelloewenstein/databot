@@ -1,0 +1,14 @@
+{
+  "databases": [{
+      "name": "",
+      "client": "pg",
+      "connection": {
+          "host": "",
+          "user": "",
+          "port": "5439",
+          "password": "",
+          "database": ""
+      },
+      "debug": true
+  }]
+}
