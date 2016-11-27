@@ -68,7 +68,7 @@ controller.on('slash_command', function(slashCommand, message) {
                 var dbObj = _.first(_.filter(dbConfig.databases, {
                     'name': dbName
                 }));
-                slashCommand.replyPublic(message, ':gear:' + 'Executing..', function() {
+                slashCommand.replyPublic(message, ':gear:' + ' Executing..', function() {
                 });
 
                 db.execute(dbObj, query).then((result) => {
@@ -76,7 +76,7 @@ controller.on('slash_command', function(slashCommand, message) {
                         slashCommand.replyPublicDelayed(message, JSON.stringify(result.rows), function() {});
                     }
                     else{
-                        slashCommand.replyPublicDelayed(message, JSON.stringify(result), function() {});
+                        slashCommand.replyPublicDelayed(message, JSON.stringify(result[0]), function() {});
                     }
                 }).catch(e => {
                     slashCommand.replyPublicDelayed(message, e.toString(), function() {});
@@ -87,7 +87,7 @@ controller.on('slash_command', function(slashCommand, message) {
             }
             break;
         default:
-            slashCommand.replyPublicDelayed(message, "I'm afraid I don't know how to " + message.command + " yet.");
+            slashCommand.replyPublicDelayed(message, ':dash:' + "I'm afraid I don't know how to " + message.command + " yet.");
 
     }
 });
