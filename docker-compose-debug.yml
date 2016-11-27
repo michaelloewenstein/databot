@@ -1,0 +1,11 @@
+databot:
+  build: .
+  volumes:
+    - ./:/opt/databot
+  ports:
+    - "8765:8765"
+  environment:
+    - CLIENT_ID=
+    - CLIENT_SECRET=
+    - VERIFICATION_TOKEN=
+    - PORT=8765
