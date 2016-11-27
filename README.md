@@ -14,16 +14,16 @@ Possible commands:
 ## How To Install ?
 `databot` is a self hosted web server, slash command based slack app, that should be installed and configured as following:
 
-### Adding A Slack Bot To your Team ###
+### Adding A Slack Bot To Your Team ###
 1. Go to https://my.slack.com/services/new/bot
 2. Create A new bot  
 3. Copy the following into the docker-compose file: CLIENT_ID, CLIENT_SECRET, VERIFICATION_TOKEN
 
-### Adding A Slash Command To your Team ###
+### Adding A Slash Command To Your Slack App ###
 1. Follow instructions here: https://api.slack.com/slash-commands#attaching_your_custom_command_to_an_app
 2. If you are running the server locally, consider using [localtunnel](https://localtunnel.github.io/www/) so you can maintain a stable ip\url.
 
-For example:
+For Example:
 ```
 lt --local-host 192.168.99.101 --port 8765 --subdomain myfreshdomain
 ``` 
